@@ -117,16 +117,55 @@ public class Registration_Page extends Base_Class{
 	@FindBy(id="submit_btn")
 	WebElement submit;
 	
+	//Click on Save Button
+	@FindBy(id="save_btn")
+	WebElement save;
+	
+	//Enter Table Name
+	@FindBy(id="table-name")
+	WebElement tablename;
+	
+	//Enter Coupen Code
+	@FindBy(id="coupon_code")
+	WebElement coupencode;
+	
+	//Are you a member of this table?
+	@FindBy(id="is_member_of_tot")
+	WebElement memberoftable;
+	
+	//Click on Subscription
 	public void clickOnSubscription() {
 		subscription.click();
 	}
 	
+	//Click on terms and Condition
 	public void clickOntermsandCondt() {
 		termsconditions.click();
 	}
 	
+	//Enter table Name
+	public void enterTablename(String tableName) {
+		tablename.sendKeys(tableName);
+	}
+	
+	//Enter Coupen Code
+	public void entercoupencode(String Code) {
+		coupencode.sendKeys(Code);
+	}
+	
+	// click on Are you a member of this table?
+	public void clickonAreyouamemberofthistable(){
+		memberoftable.click();
+		
+	}
+	
+	//Click on Submit Button
 	public Purchase_Page clickOnSubmitbtn() {
 		submit.click();
 		return new Purchase_Page();
+	}
+	
+	public void clickonSaveBtn() {
+		save.click();
 	}
 }

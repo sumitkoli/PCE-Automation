@@ -13,6 +13,7 @@ public class Purchase_Page extends Base_Class {
 		PageFactory.initElements(driver, this);
 	}
 
+	
 	@FindBy(xpath = "//input[@name='btnSubmit']")
 	WebElement submitBtn;
 

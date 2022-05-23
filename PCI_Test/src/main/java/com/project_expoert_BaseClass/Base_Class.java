@@ -47,7 +47,7 @@ protected static WebDriver driver;
 	@AfterMethod
 	public void applicationClose()
 	{
-		driver.quit();
+		//driver.quit();
 		
 		
 	}

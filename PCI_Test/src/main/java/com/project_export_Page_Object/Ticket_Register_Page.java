@@ -12,9 +12,12 @@ public class Ticket_Register_Page extends Base_Class {
 		PageFactory.initElements(driver, this);
 	}
 	
-	//Click on ticket Buy option
+	//Click on Second Individual ticket Buy option
 	@FindBy(xpath="//a[@data-ticket_id='47']")
 	WebElement bookticket;
+	
+	@FindBy(xpath="//a[@data-ticket_id='49']")
+	WebElement tableof10;
 	
 	//Click on Yes Button
 	@FindBy(xpath="//span[@class='checkmark']")
@@ -40,8 +43,12 @@ public class Ticket_Register_Page extends Base_Class {
 	@FindBy(id="cancel_addon")
 	WebElement cancelbtn;
 	
-	public void clickonBuyoption() {
+	public void clickonBuyoptionIndividualTicket() {
 		bookticket.click();
+	}
+	
+	public void clickonBuyoptionTableofTen() {
+		tableof10.click();
 	}
 	
 	public void clickOnYesradiobtn() {

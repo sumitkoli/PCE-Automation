@@ -32,7 +32,7 @@ public class Ticket_Booking_registeredUser extends Base_Class {
 		Thread.sleep(2000);
 
 		// Clicking on Buy option
-		ticket_page.clickonBuyoption();
+		ticket_page.clickonBuyoptionIndividualTicket();
 
 		// Click on yes radio button
 		ticket_page.clickOnYesradiobtn();
