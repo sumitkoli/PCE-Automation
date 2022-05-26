@@ -710,7 +710,8 @@ public class Table_of_10 extends Base_Class {
 		ticket_page.clickSubmit();
 
 		registration_page = new Registration_Page();
-		//sd
+		
+		//aas
 		// Enter Table Name
 		registration_page.enterTablename("Test Table");
 
