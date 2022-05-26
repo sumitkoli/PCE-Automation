@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.project_export_Test_Cases.Contact_Test">
+      <class name="com.project_export_Test_Cases.Table_of_10">
         <methods>
-          <include name="conttest"/>
+          <include name="test_As_BookerandMemberwithSubmitand_100percentCoupenCode"/>
           <include name="applicationClose"/>
           <include name="applicationSetup"/>
         </methods>
-      </class> <!-- com.project_export_Test_Cases.Contact_Test -->
+      </class> <!-- com.project_export_Test_Cases.Table_of_10 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
