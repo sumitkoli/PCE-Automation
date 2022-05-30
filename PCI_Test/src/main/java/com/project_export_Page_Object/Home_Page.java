@@ -9,6 +9,7 @@ import com.project_expoert_BaseClass.Base_Class;
 
 public class Home_Page extends Base_Class {
 
+	Actions actions = new Actions(driver);
 	public Home_Page() {
 		PageFactory.initElements(driver, this);
 	}
@@ -29,6 +30,14 @@ public class Home_Page extends Base_Class {
 	@FindBy(xpath="//a[contains(text(),'Categories & Criteria')]")
 	WebElement categorycriteria;
 	
+	//Expo Tab
+	@FindBy(xpath="//span[contains(text(),'Expo')]")
+	WebElement expoTab;
+	
+	//SME Zone
+	@FindBy(xpath="//a[contains(text(),'SME Zone')]")
+	WebElement  sme_zone;
+	
 	//Click on Contact Tab
 	public Contact_Page clickonContactTab() {
 		contactTab.click();
@@ -44,19 +53,31 @@ public class Home_Page extends Base_Class {
 	
 	//Move to Awards Tab
 	public void movetoAwardsTab() {
-		Actions actions = new Actions(driver);
+		
 		
 		actions.moveToElement(awardsTab).perform();
 		}
 	
 	//Click on Awards// Categories & Criteria
 	public Awards_Form_Page clickonCategoriesCriteria(){
-		Actions actions = new Actions(driver);
 
 		actions.moveToElement(categorycriteria).perform();
 
 		categorycriteria.click();
 		return new Awards_Form_Page();
 	}
+	
+	//Move To Expo Tab
+	public void move_To_Expo_Tab() {
+		actions.moveToElement(expoTab).perform();
+	}
+	
+	public SME_Zone_Page click_On_SME_Zone() {
+		
+		actions.moveToElement(sme_zone).perform();
+		sme_zone.click();
+		return new SME_Zone_Page();
+	}
+	
 	
 }

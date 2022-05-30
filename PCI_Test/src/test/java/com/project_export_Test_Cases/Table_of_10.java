@@ -21,7 +21,7 @@ public class Table_of_10 extends Base_Class {
 	Purchase_Page purchase_page;
 
 	// @Test
-	public void test_As_BookerwithSubmitand_ValidDetails() throws InterruptedException {
+	public void Test007_As_BookerwithSubmitand_ValidDetails() throws InterruptedException {
 		home_page = new Home_Page();
 
 		home_page.clickonregisterTab();
@@ -108,7 +108,7 @@ public class Table_of_10 extends Base_Class {
 	}
 
 	// @Test
-	public void test_As_BookerwithSubmitand_InvalidDetails() throws InterruptedException {
+	public void Test008_As_BookerwithSubmitand_InvalidDetails() throws InterruptedException {
 		home_page = new Home_Page();
 
 		home_page.clickonregisterTab();
@@ -180,7 +180,7 @@ public class Table_of_10 extends Base_Class {
 	}
 
 	// @Test
-	public void test_As_BookerwithSaveand_ValidDetails() throws InterruptedException {
+	public void Test009_As_BookerwithSaveand_ValidDetails() throws InterruptedException {
 		home_page = new Home_Page();
 
 		home_page.clickonregisterTab();
@@ -255,7 +255,7 @@ public class Table_of_10 extends Base_Class {
 	}
 
 	// @Test
-	public void test_As_BookerwithSaveand_InvalidDetails() throws InterruptedException {
+	public void Test010_As_BookerwithSaveand_InvalidDetails() throws InterruptedException {
 		home_page = new Home_Page();
 
 		home_page.clickonregisterTab();
@@ -307,7 +307,7 @@ public class Table_of_10 extends Base_Class {
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------
 	// @Test
-	public void test_As_BookerandMemberwithSubmitand_ValidDetails() throws InterruptedException {
+	public void Test011_As_BookerandMemberwithSubmitand_ValidDetails() throws InterruptedException {
 		home_page = new Home_Page();
 
 		home_page.clickonregisterTab();
@@ -385,7 +385,7 @@ public class Table_of_10 extends Base_Class {
 	}
 
 	// @Test
-	public void test_As_BookerandMemberwithSubmitand_InvalidDetails() throws InterruptedException {
+	public void Test012_As_BookerandMemberwithSubmitand_InvalidDetails() throws InterruptedException {
 		home_page = new Home_Page();
 
 		home_page.clickonregisterTab();
@@ -464,7 +464,7 @@ public class Table_of_10 extends Base_Class {
 	}
 
 	// @Test
-	public void test_As_BookerandMemberwithSaveand_ValidDetails() throws InterruptedException {
+	public void Test013_As_BookerandMemberwithSaveand_ValidDetails() throws InterruptedException {
 		home_page = new Home_Page();
 
 		home_page.clickonregisterTab();
@@ -548,8 +548,8 @@ public class Table_of_10 extends Base_Class {
 
 //______________________________________________________________________---------------------------------------------------------------------------------------
 
-	@Test
-	public void test_As_BookerandMemberwithSubmitand_50percentCoupenCode() throws InterruptedException {
+	// @Test
+	public void Test014_As_BookerandMemberwithSubmitand_50percentCoupenCode() throws InterruptedException {
 		home_page = new Home_Page();
 
 		home_page.clickonregisterTab();
@@ -667,7 +667,7 @@ public class Table_of_10 extends Base_Class {
 	}
 
 	// @Test
-	public void test_As_BookerandMemberwithSubmitand_100percentCoupenCode() throws InterruptedException {
+	public void Test015_As_BookerandMemberwithSubmitand_100percentCoupenCode() throws InterruptedException {
 		home_page = new Home_Page();
 
 		home_page.clickonregisterTab();
@@ -710,8 +710,8 @@ public class Table_of_10 extends Base_Class {
 		ticket_page.clickSubmit();
 
 		registration_page = new Registration_Page();
-		
-		//aas
+
+		// aas
 		// Enter Table Name
 		registration_page.enterTablename("Test Table");
 
@@ -782,6 +782,48 @@ public class Table_of_10 extends Base_Class {
 		double FinalPrice1 = Double.parseDouble(price1);
 
 		Assert.assertEquals(FinalPrice, FinalPrice1);
+
+	}
+
+	@Test
+	public void Test016_As_BookerandMemberwithSubmitand_InvalidCoupenCode() throws InterruptedException {
+		home_page = new Home_Page();
+
+		home_page.clickonregisterTab();
+
+		ticket_page = new Ticket_Register_Page();
+
+		Thread.sleep(2000);
+
+		// click on Table of 10 Buy Option
+		ticket_page.clickonBuyoptionTableofTen();
+
+		// Click on yes radio button
+		ticket_page.clickOnYesradiobtn();
+
+		// Enter Username
+		ticket_page.enteremail("sumit.koli1@conv.in");
+
+		// Enter Password
+		ticket_page.enterPassword("12345");
+
+		// Click on Submit Button
+		ticket_page.clickSubmit();
+
+		registration_page = new Registration_Page();
+
+		// Enter Table Name
+		registration_page.enterTablename("Test Table");
+
+		//Enter Coupon Code
+		registration_page.entercoupencode("WSddj");
+
+		// Coupon text validation
+		String actual = driver.findElement(By.xpath("//span[@id='coupon_code_check']")).getText();
+
+		String expected = "The coupon you entered is invalid";
+
+		Assert.assertEquals(actual, expected);
 
 	}
 }

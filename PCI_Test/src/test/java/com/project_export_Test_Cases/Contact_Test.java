@@ -15,8 +15,8 @@ import com.project_export_Page_Object.Home_Page;
 
 public class Contact_Test extends Base_Class {
 
-	@Test
-	public void conttest() throws InterruptedException {
+	//@Test
+	public void Test0019_contact_withvalidDetails() throws InterruptedException {
 
 		Thread.sleep(3000);
 
@@ -39,23 +39,23 @@ public class Contact_Test extends Base_Class {
 		contact_page.enteremailId("abc@gmail.com");
 
 		contact_page.entername("Test");
-		
+
 		contact_page.entersubject("Test");
-		
+
 		contact_page.entermessage("Test");
 
-		/*
-		 * Thread.sleep(3000); contact_page.clickonsubmitbtn();
-		 * 
-		 * Thread.sleep(3000); String expected = driver.findElement(By.xpath(
-		 * "//body/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]")) .getText();
-		 * 
-		 * System.out.println(expected);
-		 * 
-		 * String actual = "     Data Saved Successfully.";
-		 * 
-		 * Assert.assertEquals(actual, expected);
-		 */
+		contact_page.clickonsubmitbtn();
+
+		Thread.sleep(2000);
+		String expected = driver.findElement(By.xpath("//body/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]"))
+				.getText();
+
+		System.out.println(expected);
+
+		String actual = "     Data Saved Successfully.";
+
+		Assert.assertEquals(actual, expected);
 
 	}
+	
 }

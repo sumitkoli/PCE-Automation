@@ -55,7 +55,7 @@ public class Contact_Page extends Base_Class {
 	
 	// Enter Message
 		public void entermessage(String messagetext) {
-			subject.sendKeys(messagetext);
+			message.sendKeys(messagetext);
 		}
 
 	// Click on Submit Button
