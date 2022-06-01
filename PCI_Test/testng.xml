@@ -3,7 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
+      <class name="com.project_export_Test_Cases.Table_of_10"/>
       <class name="com.project_export_Test_Cases.Ticket_Booking_registeredUser"/>
+      <class name="com.project_export_Test_Cases.SME_Zone_Test"/>
       <class name="com.project_export_Test_Cases.Contact_Test"/>
       <class name="com.project_export_Test_Cases.Awards_Form"/>
     </classes>

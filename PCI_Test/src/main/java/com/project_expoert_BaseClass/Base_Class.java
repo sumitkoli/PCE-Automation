@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -47,7 +48,7 @@ protected static WebDriver driver;
 	@AfterMethod
 	public void applicationClose()
 	{
-		//driver.quit();
+		driver.quit();
 		
 		
 	}
@@ -81,4 +82,6 @@ protected static WebDriver driver;
 			e.printStackTrace();
 		}
 	}
+	
+	
 }

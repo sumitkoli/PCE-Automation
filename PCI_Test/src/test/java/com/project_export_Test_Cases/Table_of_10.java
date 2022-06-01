@@ -107,7 +107,7 @@ public class Table_of_10 extends Base_Class {
 
 	}
 
-	// @Test
+	//@Test
 	public void Test008_As_BookerwithSubmitand_InvalidDetails() throws InterruptedException {
 		home_page = new Home_Page();
 
@@ -179,7 +179,7 @@ public class Table_of_10 extends Base_Class {
 
 	}
 
-	// @Test
+	@Test
 	public void Test009_As_BookerwithSaveand_ValidDetails() throws InterruptedException {
 		home_page = new Home_Page();
 
@@ -254,7 +254,7 @@ public class Table_of_10 extends Base_Class {
 
 	}
 
-	// @Test
+	//@Test
 	public void Test010_As_BookerwithSaveand_InvalidDetails() throws InterruptedException {
 		home_page = new Home_Page();
 
@@ -306,7 +306,7 @@ public class Table_of_10 extends Base_Class {
 	}
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------
-	// @Test
+	//@Test
 	public void Test011_As_BookerandMemberwithSubmitand_ValidDetails() throws InterruptedException {
 		home_page = new Home_Page();
 
@@ -384,7 +384,7 @@ public class Table_of_10 extends Base_Class {
 
 	}
 
-	// @Test
+	//@Test
 	public void Test012_As_BookerandMemberwithSubmitand_InvalidDetails() throws InterruptedException {
 		home_page = new Home_Page();
 
@@ -463,7 +463,7 @@ public class Table_of_10 extends Base_Class {
 
 	}
 
-	// @Test
+	@Test
 	public void Test013_As_BookerandMemberwithSaveand_ValidDetails() throws InterruptedException {
 		home_page = new Home_Page();
 
@@ -548,7 +548,7 @@ public class Table_of_10 extends Base_Class {
 
 //______________________________________________________________________---------------------------------------------------------------------------------------
 
-	// @Test
+	//@Test
 	public void Test014_As_BookerandMemberwithSubmitand_50percentCoupenCode() throws InterruptedException {
 		home_page = new Home_Page();
 
@@ -666,7 +666,7 @@ public class Table_of_10 extends Base_Class {
 
 	}
 
-	// @Test
+	//@Test
 	public void Test015_As_BookerandMemberwithSubmitand_100percentCoupenCode() throws InterruptedException {
 		home_page = new Home_Page();
 

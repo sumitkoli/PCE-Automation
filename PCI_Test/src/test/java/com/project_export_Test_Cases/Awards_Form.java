@@ -24,7 +24,7 @@ public class Awards_Form extends Base_Class {
 
 	Awards_Form_Page awards_page;
 
-	//@Test
+	@Test
 	public void Test0017_Awards_Form_with_ValidDetails() throws InterruptedException {
 		home_page = new Home_Page();
 

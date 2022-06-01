@@ -5,8 +5,8 @@
     <classes>
       <class name="com.project_export_Test_Cases.SME_Zone_Test">
         <methods>
+          <include name="Test021_Send_Q_to_SME_InvalidDetails"/>
           <include name="applicationClose"/>
-          <include name="Test020_Send_Q_to_SME"/>
           <include name="applicationSetup"/>
         </methods>
       </class> <!-- com.project_export_Test_Cases.SME_Zone_Test -->

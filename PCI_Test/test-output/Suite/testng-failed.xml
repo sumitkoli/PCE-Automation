@@ -5,21 +5,14 @@
     <classes>
       <class name="com.project_export_Test_Cases.Contact_Test">
         <methods>
-          <include name="conttest"/>
+          <include name="Test0019_contact_withvalidDetails"/>
           <include name="applicationClose"/>
           <include name="applicationSetup"/>
         </methods>
       </class> <!-- com.project_export_Test_Cases.Contact_Test -->
-      <class name="com.project_export_Test_Cases.Ticket_Booking_registeredUser">
-        <methods>
-          <include name="applicationClose"/>
-          <include name="ticketBookingRegisteredUser"/>
-          <include name="applicationSetup"/>
-        </methods>
-      </class> <!-- com.project_export_Test_Cases.Ticket_Booking_registeredUser -->
       <class name="com.project_export_Test_Cases.Awards_Form">
         <methods>
-          <include name="Test_Awards_Form_with_ValidDetails"/>
+          <include name="Test0017_Awards_Form_with_ValidDetails"/>
           <include name="applicationClose"/>
           <include name="applicationSetup"/>
         </methods>
