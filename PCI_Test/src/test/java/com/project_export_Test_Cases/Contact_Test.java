@@ -18,7 +18,7 @@ public class Contact_Test extends Base_Class {
 
 	Action_Driver action_driver;
 
-	// @Test
+	@Test
 	public void Test0019_contact_withvalidDetails() throws InterruptedException {
 
 		Thread.sleep(3000);

@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+
+<listeners>
+<listener class-name="com.project_export_ITestListner.TestNgListeners"/>
+</listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.project_export_Test_Cases.Table_of_10"/>
+     <class name="com.project_export_Test_Cases.Table_of_10"/>
       <class name="com.project_export_Test_Cases.Ticket_Booking_registeredUser"/>
       <class name="com.project_export_Test_Cases.SME_Zone_Test"/>
       <class name="com.project_export_Test_Cases.Contact_Test"/>

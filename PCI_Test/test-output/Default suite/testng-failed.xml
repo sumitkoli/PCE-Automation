@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.project_export_Test_Cases.SME_Zone_Test">
+      <class name="com.project_export_Test_Cases.Awards_Form">
         <methods>
-          <include name="Test021_Send_Q_to_SME_InvalidDetails"/>
+          <include name="Test0017_Awards_Form_with_ValidDetails"/>
           <include name="applicationClose"/>
           <include name="applicationSetup"/>
         </methods>
-      </class> <!-- com.project_export_Test_Cases.SME_Zone_Test -->
+      </class> <!-- com.project_export_Test_Cases.Awards_Form -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

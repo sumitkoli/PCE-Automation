@@ -12,6 +12,7 @@ import com.project_expoert_BaseClass.Base_Class;
 
 public class Awards_Form_Page extends Base_Class {
 	
+	@SuppressWarnings("deprecation")
 	WebDriverWait wait=new WebDriverWait(driver,30);
 
 	public Awards_Form_Page() {

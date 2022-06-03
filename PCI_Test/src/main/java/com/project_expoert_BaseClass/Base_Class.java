@@ -2,13 +2,10 @@ package com.project_expoert_BaseClass;
 
 import java.io.File;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -19,12 +16,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 
+import com.aventstack.extentreports.ExtentReports;
 import com.project_export_ITestListner.TestNgListeners;
 
 @Listeners(TestNgListeners.class)
 public class Base_Class {
-
-protected static WebDriver driver;
+	static ExtentReports extent;
+ protected static WebDriver driver=null;
 	
 	@BeforeMethod
 	public void applicationSetup()
@@ -53,19 +51,24 @@ protected static WebDriver driver;
 		
 	}
 	
-	public void failure(ITestResult result) {
+	public static String failure(ITestResult result) {
 		Date currentdate = new Date();
 
 		String screenshotFilename = currentdate.toString().replace(" ", "-").replace(":", "-");
 
-		File screensht = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-		try {
-			FileUtils.copyFile(screensht, new File(".//FailedScreenshot//" + screenshotFilename+result.getName()+ ".png"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		String destpath=System.getProperty("user.dir")+"\\FailedScreenshot\\" + screenshotFilename+result.getName()+ ".png";
+		
+		  try { 
+			  FileUtils.copyFile(source, new File(".//FailedScreenshot//" + screenshotFilename+result.getName()+ ".png")); 
+		  } catch (IOException e) { 
+			  
+		  //TODO Auto-generated catch block
+		  e.printStackTrace();
+		  }
+		return screenshotFilename;
+		 
 	}
 	
 	public void passed(ITestResult result) {
@@ -83,5 +86,18 @@ protected static WebDriver driver;
 		}
 	}
 	
+	
+	  public static String getScreenshotPath(String TestCaseName, WebDriver driver) throws IOException {
+		  TakesScreenshot ts=(TakesScreenshot)driver;
+	  
+	  File source=ts.getScreenshotAs(OutputType.FILE);
+	  
+	  String destPath=System.getProperty("user.dir")+"\\Reports1\\"+TestCaseName+".png";
+	  File file=new File(destPath); 
+	  FileUtils.copyFile(source, file); 
+	  return destPath;
+	  
+	  }
+	 
 	
 }

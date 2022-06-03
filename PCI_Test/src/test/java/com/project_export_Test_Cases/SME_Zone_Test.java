@@ -14,7 +14,7 @@ public class SME_Zone_Test extends Base_Class {
 	Home_Page home_page;
 	SME_Zone_Page sme_zone;
 
-	// @Test
+	@Test
 	public void Test021_Send_Q_to_Speaker_validDetails() throws InterruptedException {
 
 		home_page = new Home_Page();
@@ -100,7 +100,7 @@ public class SME_Zone_Test extends Base_Class {
 
 //_______-----------------------------------------------___________________________________------------------------------------------------------------------------
 	
-	//@Test
+	@Test
 	public void Test023_Send_Q_to_SME_validDetails() throws InterruptedException {
 
 		home_page = new Home_Page();

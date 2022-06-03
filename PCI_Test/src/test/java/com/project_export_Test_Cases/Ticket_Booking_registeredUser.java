@@ -97,7 +97,7 @@ public class Ticket_Booking_registeredUser extends Base_Class {
 
 	}
 
-	// @Test
+	@Test
 	public void Test002_ticketBookingRegisteredUser_withInvalidDetails() throws InterruptedException {
 		home_page = new Home_Page();
 
@@ -152,7 +152,7 @@ public class Ticket_Booking_registeredUser extends Base_Class {
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------	
 
-	// @Test
+	@Test
 	public void Test003_ticketBookingRegisteredUser_with50percentValidCoupenCodeDetails() throws InterruptedException {
 		home_page = new Home_Page();
 
@@ -251,7 +251,7 @@ public class Ticket_Booking_registeredUser extends Base_Class {
 
 	}
 
-	// @Test
+	@Test
 	public void Test004_ticketBookingRegisteredUser_with100percentValidCoupenCodeDetails() throws InterruptedException {
 		home_page = new Home_Page();
 
@@ -350,7 +350,7 @@ public class Ticket_Booking_registeredUser extends Base_Class {
 
 	}
 
-	// @Test
+	@Test
 	public void Test005_ticketBookingRegisteredUser_withInvalidCoupenCodeDetails() throws InterruptedException {
 		home_page = new Home_Page();
 
@@ -411,7 +411,7 @@ public class Ticket_Booking_registeredUser extends Base_Class {
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------	
 
-	// @Test
+	@Test
 	public void Test006_ticketBookingRegisteredUser_withStadiumTour() throws InterruptedException {
 		home_page = new Home_Page();
 
